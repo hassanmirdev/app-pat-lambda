@@ -95,19 +95,19 @@ jobs:
       # Step: Terraform Init
       - name: Terraform Init
         run: | 
-          cd ./infra/environments/${{ github.event.inputs.environment || 'dev' }}
+          cd ./infra/environments/dev
           terraform init
 
       # Step: Run Terraform Validate (validate configuration files)
       - name: Terraform Validate
         run: |
-          cd ./infra/environments/${{ github.event.inputs.environment || 'dev' }}
+          cd ./infra/environments/dev
           terraform validate
 
       # Step: Terraform Plan
       - name: Terraform Plan
         run: |
-          cd ./infra/environments/${{ github.event.inputs.environment || 'dev' }}
+          cd ./infra/environments/dev
           terraform plan 
 
       # # Step: Checkout Repository for PR
