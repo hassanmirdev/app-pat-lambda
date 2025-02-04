@@ -13,10 +13,10 @@ on:
   #       - staging
   #       - prod
 
-  # push:
-  #   branches:
-  #      - main
-  #      - master
+  push:
+    branches:
+       - main
+       - master
   # pull_request:
   #    branches:
   #      - main
