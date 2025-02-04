@@ -15,11 +15,11 @@ module "ecr_repository" {
 
 # Call the Lambda module for creating a Lambda function
 module "lambda_function" {
-  source = "../../modules/lambda"  # Path to the Lambda module
+  source = "../../modules/lambda"
 
-  lambda_function_name = "hello-world2"  # Lambda function name
-  lambda_image_uri     = "677276078111.dkr.ecr.us-east-1.amazonaws.com/app-pat-repo:latest"  # ECR image URI for Lambda
-  lambda_role_arn      = module.iam_lambda.lambda_role_arn  # IAM role ARN for Lambda
+  function_name = "hello-world2"  # Corrected name
+  image_uri     = "677276078111.dkr.ecr.us-east-1.amazonaws.com/app-pat-repo:latest"  # Corrected name
+  role_arn      = module.iam_lambda.lambda_role_arn  # Corrected name
 }
 
 # Call the API Gateway module for creating an API Gateway
