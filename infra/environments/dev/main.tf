@@ -27,7 +27,7 @@ module "api_gateway" {
   source = "../../modules/api"  # Path to the API Gateway module
 
   api_name        = "serverless_lambda_gw"
-  route_key       = "GET /hello"
+  route_key       = "GET /health"
   lambda_invoke_arn = module.lambda_function.lambda_function_arn
   lambda_function_name = module.lambda_function.lambda_function_name
   log_group_name  = "/aws/api_gw/hello-world2"
