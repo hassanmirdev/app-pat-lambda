@@ -13,9 +13,9 @@ output "lambda_function_image_uri" {
   value       = module.lambda_function.lambda_image_uri
 }
 
-output "base_url" {
-  description = "Base URL for API Gateway stage."
-  value       = module.api_gateway.api_gateway_url
+# output "base_url" {
+ # description = "Base URL for API Gateway stage."
+ # value       = module.api_gateway.api_gateway_url
 }
 # output "lambda_function_image_uri" {
  # description = "The ECR URI for the Lambda function image."
