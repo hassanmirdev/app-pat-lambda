@@ -28,7 +28,7 @@ resource "aws_apigatewayv2_stage" "lambda" {
 }
 
 # Integration of Lambda function with API Gateway
-resource "aws_apigatewayv2_integration" "hello_world" {
+resource "aws_apigatewayv2_integration" "hello_world2" {
   api_id             = aws_apigatewayv2_api.lambda.id
   integration_uri    = var.lambda_invoke_arn
   integration_type   = "AWS_PROXY"
@@ -36,10 +36,10 @@ resource "aws_apigatewayv2_integration" "hello_world" {
 }
 
 # Route to trigger Lambda
-resource "aws_apigatewayv2_route" "hello_world" {
+resource "aws_apigatewayv2_route" "hello_world2" {
   api_id   = aws_apigatewayv2_api.lambda.id
   route_key = var.route_key
-  target   = "integrations/${aws_apigatewayv2_integration.hello_world.id}"
+  target   = "integrations/${aws_apigatewayv2_integration.hello_world2.id}"
 }
 
 # CloudWatch Log Group for API Gateway
