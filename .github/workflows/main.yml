@@ -1,4 +1,4 @@
-name: Provision EKS infra through terraform,,
+name: Deploy AWS Lambda with Api Gateway.
 run-name: infra prov
 on:
   workflow_dispatch:
