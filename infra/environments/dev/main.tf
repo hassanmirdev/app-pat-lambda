@@ -1,5 +1,5 @@
 
-# Call the IAM module for creating Lambda execution role.
+# Call the IAM module for creating Lambda execution role..
 module "iam_lambda" {
   source = "../../modules/iam"  # Path to the IAM module
 
