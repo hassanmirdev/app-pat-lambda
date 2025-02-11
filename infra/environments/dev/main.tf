@@ -6,12 +6,6 @@ module "iam_lambda" {
   lambda_role_name = "serverless_lambda"  # You can customize this if needed
 }
 
-# Call the ECR module for creating an ECR repository
-module "ecr_repository" {
-  source = "../../modules/ecr"  # Path to the ECR module
-
-  ecr_repository_name = "hello-world-repo"  # You can customize this if needed
-}
 
 # Call the Lambda module for creating a Lambda function
 module "lambda_function" {
@@ -34,3 +28,10 @@ module "api_gateway" {
   retention_days  = 30
   stage_name      = "prod"
 }
+
+# Call the ECR module for creating an ECR repository, it is commited for now.
+# module "ecr_repository" {
+ # source = "../../modules/ecr"  # Path to the ECR module
+
+ # ecr_repository_name = "hello-world-repo"  # You can customize this if needed
+#}
