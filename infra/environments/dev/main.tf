@@ -3,7 +3,7 @@
 module "iam_lambda" {
   source = "../../modules/iam"  # Path to the IAM module
 
-  lambda_role_name = "serverless_lambda"  # You can customize this if needed
+  lambda_role_name = "serverless_lambda" 
 }
 
 
@@ -11,9 +11,9 @@ module "iam_lambda" {
 module "lambda_function" {
   source = "../../modules/lambda"
 
-  lambda_function_name = "hello-world2"  # Corrected name
-  lambda_image_uri     = "677276078111.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest"  # Corrected name
-  lambda_role_arn      = module.iam_lambda.lambda_role_arn  # Corrected name
+  lambda_function_name = "hello-world2"  
+  lambda_image_uri     = "677276078111.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest"  
+  lambda_role_arn      = module.iam_lambda.lambda_role_arn  
 }
 
 # Call the API Gateway module for creating an API Gateway
@@ -33,5 +33,5 @@ module "api_gateway" {
 # module "ecr_repository" {
  # source = "../../modules/ecr"  # Path to the ECR module
 
- # ecr_repository_name = "hello-world-repo"  # You can customize this if needed
+ # ecr_repository_name = "hello-world-repo" 
 #}
