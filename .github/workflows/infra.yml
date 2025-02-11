@@ -1,4 +1,4 @@
-name: Deploy AWS Lambda with Api Gateway.
+name: Deploy AWS Lambda with Api Gateway..
 run-name: infra prov
 on:
   workflow_dispatch:
