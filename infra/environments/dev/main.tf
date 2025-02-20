@@ -12,7 +12,7 @@ module "lambda_function" {
   source = "../../modules/lambda"
 
   lambda_function_name = "hello-world2"  
-  lambda_image_uri     = "677276078111.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest"  
+  lambda_image_uri     = "677276078111.dkr.ecr.us-east-1.amazonaws.com/my-app-repo:appointment-service-latest"  
   lambda_role_arn      = module.iam_lambda.lambda_role_arn  
 }
 
